@@ -1,0 +1,38 @@
+{
+  "timestamp": "2025-05-18T03:55:41.334Z",
+  "results": {
+    "userService": {
+      "tests": 4,
+      "passed": 4,
+      "failed": 0
+    },
+    "bookService": {
+      "tests": 4,
+      "passed": 4,
+      "failed": 0
+    },
+    "loanService": {
+      "tests": 4,
+      "passed": 4,
+      "failed": 0
+    },
+    "total": {
+      "tests": 12,
+      "passed": 12,
+      "failed": 0
+    }
+  },
+  "testData": {
+    "user": {
+      "name": "Test User 1747540541050",
+      "email": "testuser1747540541050@example.com",
+      "role": "student"
+    },
+    "book": {
+      "title": "Test Book 1747540541050",
+      "author": "Test Author 1747540541050",
+      "isbn": "1747540541050123",
+      "copies": 5
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "smart-library-system-microservices",
+  "version": "1.0.0",
+  "description": "Smart Library System using Microservices Architecture",  "scripts": {
+    "install-all": "powershell -Command \"Write-Host 'Installing User Service dependencies...' -ForegroundColor Cyan; cd user-service; npm install; Write-Host 'Installing Book Service dependencies...' -ForegroundColor Cyan; cd ../book-service; npm install; Write-Host 'Installing Loan Service dependencies...' -ForegroundColor Cyan; cd ../loan-service; npm install; Write-Host 'All dependencies installed successfully!' -ForegroundColor Green\"",
+    "start": "powershell -File \"./start-services.ps1\"",
+    "dev": "powershell -File \"./start-services.ps1\"",
+    "test": "powershell -File \"./run-tests-new.ps1\"",
+    "test:advanced": "powershell -File \"./run-advanced-tests.ps1\""
+  },
+  "keywords": [
+    "microservices",
+    "library-system"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.9.0"
+  }
+}
