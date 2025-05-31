@@ -3,7 +3,7 @@ const { Sequelize } = require('sequelize');
 const path = require('path');
 require('dotenv').config();
 
-const dbPath = process.env.DB_PATH || path.join(__dirname, '../user_db.sqlite');
+const dbPath = process.env.DB_PATH || path.join(__dirname, '../data/user_db.sqlite');
 
 // Initialize sequelize with SQLite
 const sequelize = new Sequelize({
