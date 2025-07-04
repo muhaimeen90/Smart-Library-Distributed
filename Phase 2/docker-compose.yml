@@ -3,21 +3,48 @@ services:
     build: ./user-service
     ports:
       - "8081:8081"
+    volumes:
+      - user-data:/app/data
+    environment:
+      - NODE_ENV=production
+      - PORT=8081
 
   book-service:
     build: ./book-service
     ports:
       - "8082:8082"
+    volumes:
+      - book-data:/app/data
+    environment:
+      - NODE_ENV=production
+      - PORT=8082
 
   loan-service:
     build: ./loan-service
     ports:
       - "8083:8083"
+    volumes:
+      - loan-data:/app/data
     environment:
       - USER_SERVICE_URL=http://user-service:8081
       - BOOK_SERVICE_URL=http://book-service:8082
+      - NODE_ENV=production
+      - PORT=8083
 
   nginx:
     build: ./nginx
     ports:
       - "80:80"
+    depends_on:
+      - user-service
+      - book-service
+      - loan-service
+
+volumes:
+  user-data:
+  book-data:
+  loan-data:
+
+networks:
+  library-network:
+    driver: bridge
