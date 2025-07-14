@@ -14,4 +14,4 @@ docker run -d --name book-service --network library-network -p 8082:8082 -v book
 docker run -d --name loan-service --network library-network -p 8083:8083 -v loan-data:/app/data -e USER_SERVICE_URL=http://user-service:8081 -e BOOK_SERVICE_URL=http://book-service:8082 phase2-loan-service
 docker run -d --name nginx --network library-network -p 80:80 phase2-nginx
 
-echo "✅ Started! Access at: http://localhost"
+
